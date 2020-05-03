@@ -60,7 +60,7 @@ public class UserService {
 			throw new UserNotFoundException("User Not found in user Repository, provide the correct user id");
 		}
 
-		user.setId(id);
+		user.setUserid(id);
 
 		return userRepository.save(user);
 	}
