@@ -1,6 +1,5 @@
 package com.stackcimplify.restservices.controllers;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -9,7 +8,6 @@ import javax.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
