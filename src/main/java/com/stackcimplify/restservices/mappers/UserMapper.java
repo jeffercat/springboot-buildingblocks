@@ -6,8 +6,6 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import com.stackcimplify.restservices.dtos.UserMsDto;
 import com.stackcimplify.restservices.entities.User;

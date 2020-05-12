@@ -21,7 +21,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.stackcimplify.restservices.entities.Order;
 import com.stackcimplify.restservices.entities.User;
 import com.stackcimplify.restservices.exceptions.UserNotFoundException;
-import com.stackcimplify.restservices.repositories.UserRepository;
+//import com.stackcimplify.restservices.repositories.UserRepository;
 import com.stackcimplify.restservices.services.UserService;
 
 @RestController
@@ -29,8 +29,8 @@ import com.stackcimplify.restservices.services.UserService;
 @Validated
 public class UserHateoasController {
 
-	@Autowired
-	private UserRepository userRepository;
+//	@Autowired
+//	private UserRepository userRepository;
 
 	@Autowired
 	private UserService userService;

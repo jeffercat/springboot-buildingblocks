@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.stackcimplify.restservices.entities.Order;
 import com.stackcimplify.restservices.entities.User;
 import com.stackcimplify.restservices.exceptions.UserNotFoundException;
-import com.stackcimplify.restservices.repositories.OrderRepository;
+//import com.stackcimplify.restservices.repositories.OrderRepository;
 import com.stackcimplify.restservices.repositories.UserRepository;
 
 @RestController
@@ -23,8 +23,8 @@ public class OrderHateoasController {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Autowired
-	private OrderRepository orderRepository;
+//	@Autowired
+//	private OrderRepository orderRepository;
 
 	// get All Order for a User
 	@GetMapping("/{userid}/orders")
