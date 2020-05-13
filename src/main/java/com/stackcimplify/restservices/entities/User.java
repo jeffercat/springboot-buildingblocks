@@ -18,24 +18,32 @@ import org.springframework.hateoas.ResourceSupport;
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonView;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 //Entity
+@ApiModel(description = "This model is to create a new user")
 @Entity
 @Table(name="user")
 //@JsonIgnoreProperties({"firstname","lastname"}) --Static Filtering JsonIgnore
 //@JsonFilter(value = "userFilter") -- Used for MappingJacksonValue filtering section
 public class User extends ResourceSupport {
 	
+	@ApiModelProperty(notes = "userid - Unique identifier of user", required = true, position = 1)
 	@Id
 	@GeneratedValue
 	@JsonView(Views.External.class)
 	private Long userid;
 	
+	@ApiModelProperty(notes = "username of user", required = false, position = 2)
+	@Size(min=2,max = 50)
 	@NotEmpty(message = "Username is Mandatory field. Please provide username")
 	@Column(name="USER_NAME",length = 50, nullable = false, unique = true)
 	@JsonView(Views.External.class)
 	private String username;
 	
-	@Size(min=2, message="FirstName should have atleast 2 characters")
+	@ApiModelProperty(notes = "First name of the User.", example = "Kalyan", required = false, position = 3)
+	@Size(min=2,max = 50, message="FirstName should have atleast 2 characters")
 	@Column(name="FIRST_NAME",length = 50, nullable = false)
 	@JsonView(Views.External.class)
 	private String firstname;
@@ -52,6 +60,7 @@ public class User extends ResourceSupport {
 	@JsonView(Views.Internal.class)
 	private String role;
 	
+	@ApiModelProperty(notes = "SSN of the User.", example = "SSN1010", required = true, position = 4)
 	@Column(name="SSN",length = 50, nullable = false, unique = true)
 	//@JsonIgnore --Static Filtering JsonIgnore
 	@JsonView(Views.Internal.class)
